@@ -1,0 +1,520 @@
+body {
+    margin: 0px;
+    font-family: roboto;
+    background-color: lightgray;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* header */
+#body-header {
+    width: 100%;
+    height: 8vh;
+    background-color: #11379F;
+    position: fixed;
+    z-index: 5;
+}
+
+#nav-menu {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: right;
+    margin-right: 150px;
+}
+
+#nav-menu li {
+    margin: 5px 15px;
+    font-size: 1.1rem;
+    font-family: roboto;
+    font-weight: bold;
+    padding: 15px;
+}
+
+#nav-menu li a {
+    text-decoration: none;
+    color: white;
+    padding-bottom: 5px;
+}
+
+.nav-list {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    position: relative;
+}
+
+.nav-list::after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    border-radius: 4px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .25s ease;
+}
+
+.nav-list:hover::after {
+    transform: scaleX(1);
+}
+
+/* detail */
+
+#detail {
+    height: 65vh;
+    background-image: url(images/image3.png);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    padding-top: 0.1rem;
+}
+
+#detail-docspot {
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    margin-top: 50px;
+
+}
+
+#docspot h1 {
+    font-size: 3rem;
+    font-family: roboto;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 10px;
+}
+
+#docspot h1:hover {
+    color: lightgray;
+}
+
+#detail-docspot p {
+    color: white;
+    text-align: center;
+    margin: 5px 200px;
+    font-family: roboto;
+    font-size: 20px;
+}
+
+.detail-lines {
+    display: block;
+    opacity: 0;
+    animation: revealText .5s forwards;
+}
+
+#detail-line1 {
+    animation-delay: .175s;
+}
+
+#detail-line2 {
+    animation-delay: .25s;
+}
+
+#detail-line3 {
+    animation-delay: .325s;
+}
+
+@keyframes revealText {
+    from {
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* home */
+
+#home {
+    width: 80vw;
+    margin: auto;
+    margin-top: -25vh;
+    /* margin-bottom: 80px; */
+    justify-content: center;
+}
+
+#home-container {
+    height: 52vh;
+    background-color: white;
+    box-shadow: 0px 0px 4px 2px gray;
+}
+
+#about-home {
+    width: 50vw;
+    margin-left: 40px;
+    padding-top: 65px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#about-home p {
+    font-family: roboto;
+    font-size: 18px;
+    color: gray;
+}
+
+#home-heading {
+    font-family: roboto;
+    font-size: 30px;
+}
+
+#home-heading span {
+    color: #11379F;
+}
+
+#home-heading span:hover {
+    color: gray;
+}
+
+#add-button {
+    padding: 50px 140px 30px 80px;
+    border: dashed #11379F;
+    display: inline-block;
+    width: 50px;
+    margin: 65px 70px;
+}
+
+#add-button img {
+    width: 120px;
+    height: 130px;
+}
+
+#home-button {
+    vertical-align: middle;
+    display: inline-block;
+    width: 120px;
+    height: 40px;
+    border-radius: 3%;
+    color: white;
+    background-color: #11379F;
+    border: 2px solid #11379F;
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin-top: 5px;
+}
+
+#home-button:hover {
+    cursor: pointer;
+    animation: pulsate 1s ease-in-out;
+}
+
+@keyframes pulsate {
+    0% {
+        box-shadow:
+            0 0 1px #335cce,
+            0 0 10px #041647;
+    }
+}
+
+/* tools */
+
+#tools {
+    width: 80vw;
+    margin: auto;
+    padding-top: 60px;
+    justify-content: center;
+}
+
+#tools-heading h1 {
+    text-align: center;
+    font-size: 2.3rem;
+    color: #041647;
+    margin-bottom: 15px;
+}
+
+#tools-container {
+    height: 43vh;
+    background-color: white;
+    box-shadow: 0px 0px 4px 2px gray;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+.tools-column {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.tool-name {
+    color: #11379F;
+    font-family: roboto;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0px;
+}
+
+.tools-column img {
+    width: 250px;
+    height: 180px;
+    margin: 0px auto;
+}
+
+#tool1:hover {
+    background-color: rgb(242, 242, 242);
+}
+
+#tool2:hover {
+    background-color: rgb(242, 242, 242);
+}
+
+#tool3:hover {
+    background-color: rgb(242, 242, 242);
+}
+
+#tool4:hover {
+    background-color: rgb(242, 242, 242);
+}
+
+.tools-button {
+    margin: 30px;
+    margin: auto;
+    text-decoration: none;
+    font-size: 25px;
+    padding: 3px 45px;
+    border: 3px solid #11379F;
+    position: relative;
+    border-radius: 3%;
+    background-color: #11379F;
+}
+
+.tools-button i {
+    color: white;
+    font-size: 1.3rem;
+}
+
+.tools-button:hover {
+    cursor: pointer;
+    animation: pulsate 1.5s ease-in-out;
+    background-color: #11379F;
+}
+
+@keyframes pulsate {
+    0% {
+        box-shadow:
+            0 0 1px #335cce,
+            0 0 10px #041647;
+    }
+}
+
+/* working */
+
+#working {
+    width: 80vw;
+    margin: auto;
+    padding-top: 60px;
+    justify-content: center;
+
+}
+
+#working-heading h1 {
+    text-align: center;
+    font-size: 2.3rem;
+    color: #041647;
+    margin-bottom: 15px;
+}
+
+#working-container {
+    height: 40vh;
+    background-color: white;
+    box-shadow: 0px 0px 4px 2px gray;
+    padding-top: 6px;
+
+}
+
+#steps h1 {
+    text-align: center;
+    color: #11379F;
+    font-family: roboto;
+    font-size: 2rem;
+    margin-top: 20px;
+}
+
+#steps-list {
+    list-style: none;
+    margin-left: 30px;
+    font-family: roboto;
+    font-size: 1.2rem;
+    color: gray;
+}
+
+#steps-list li {
+    padding: 3px;
+}
+
+/* about */
+
+#about {
+    width: 80vw;
+    margin: auto;
+    padding-top: 60px;
+    margin-bottom: 80px;
+    justify-content: center;
+}
+
+#about-heading h1 {
+    text-align: center;
+    font-size: 2.3rem;
+    color: #041647;
+    margin-bottom: 15px;
+}
+
+#about-container {
+    width: 80vw;
+    height: 45vh;
+    background-color: white;
+    box-shadow: 0px 0px 4px 2px gray;
+}
+
+#contact-part {
+    width: 80vw;
+    margin: auto;
+    height: 35vh;
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+#abt-ds {
+    display: inline-block;
+    width: 30%;
+    vertical-align: top;
+    margin: 15px 18px;
+    margin-left: 30px;
+}
+
+#abt-ds h3 {
+    font-family: roboto;
+    font-size: 2rem;
+    text-align: center;
+    color: #11379F;
+}
+
+#abt-ds p {
+    font-family: roboto;
+    font-size: 1rem;
+    text-align: center;
+    color: gray;
+}
+
+#names {
+    display: inline-block;
+    width: 30%;
+    vertical-align: top;
+    margin: 15px 18px;
+}
+
+#names h3 {
+    font-family: roboto;
+    font-size: 2rem;
+    color: #11379F;
+    text-align: center;
+}
+
+#names ul li {
+    text-align: center;
+    font-size: 1rem;
+    font-family: roboto;
+    padding: 5px 0px;
+}
+
+#names ul {
+    list-style: none;
+    padding: 0px;
+    color: gray;
+}
+
+#names ul li span {
+    padding: 5px;
+    color: #11379F;
+}
+
+
+#contact {
+    display: inline-block;
+    width: 30%;
+    vertical-align: top;
+    margin: 15px 18px;
+}
+
+#contact h3 {
+    font-family: roboto;
+    font-size: 2rem;
+    text-align: center;
+    color: #11379F;
+}
+
+#contact ul {
+    list-style: none;
+    padding: 0px;
+    text-align: center;
+    color: gray;
+}
+
+#contact ul li {
+    padding: 5px;
+    font-size: 1rem;
+    font-family: roboto;
+}
+
+#contact ul li span {
+    padding: 3px;
+    color: #11379F;
+}
+
+/*Social Icons*/
+
+#social-icons {
+    background-color: #11379F;
+    height: 10vh;
+    width: 100%;
+    margin-left: 0px;
+    vertical-align: baseline;
+}
+
+#social-icons-list {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0px;
+    padding-left: 0px;
+}
+
+#social-icons-list li {
+    font-size: 1.6rem;
+    margin: 2vh 30px;
+}
+
+#social-icons-list li a i {
+    border-radius: 50%;
+    padding: 10px;
+    color: white;
+}
+
+#social-icons-list li a i:hover {
+    box-shadow: 0px 0px 5px 2px whitesmoke;
+    color: whitesmoke;
+}
